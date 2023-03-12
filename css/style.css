@@ -110,6 +110,17 @@ body {
     .text_mem h2{
         font-size: 1.5em;
     }
+    .mems1-5:hover > .text_mem > .img_mem {
+        height: 20em;
+        display: block;
+        transition-duration: 2.5s;
+    }
+    
+    .input_mem:checked + .text_mem > .img_mem {
+        height: 20em;
+        display: block;
+        transition-duration: 0.5s;
+    }
 }
 
 @media (max-width: 320px) {
@@ -118,6 +129,18 @@ body {
     }
     .text_mem h2{
         font-size: 1.0em;
+    }
+
+    .mems1-5:hover > .text_mem > .img_mem {
+        height: 10em;
+        display: block;
+        transition-duration: 2.5s;
+    }
+    
+    .input_mem:checked + .text_mem > .img_mem {
+        height: 10em;
+        display: block;
+        transition-duration: 0.5s;
     }
 }
 
