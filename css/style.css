@@ -33,7 +33,7 @@ body {
 }
 .mems1-5 {
     display: block;
-    border: 5px solid #1eae42;
+    border: 0.3em solid #1eae42;
 }
 
 .input_mem {
@@ -67,6 +67,7 @@ body {
 }
 .img_mem {
     display: none;
+    cursor: pointer;
     margin: 0 auto;
     transition-duration: 0.5s;
 }
@@ -74,24 +75,40 @@ body {
 .cssBayan_task:hover .open {
     opacity: 1;
 }
-.input_mem:checked + .text_mem > .open {
-    transform: rotate(45deg);
-}
-.input_mem:hover + .text_mem > .open {
-    transform: rotate(45deg);
+.mems1-5:hover > .text_mem > .img_mem {
+    height: 25em;
+    display: block;
 }
 
-.mems1-5:hover > .text_mem > .img_mem, 
 .input_mem:checked + .text_mem > .img_mem {
     height: 25em;
     display: block;
 }
 
-.cssBayan_task:hover > .text_mem h2, 
+.mems1-5:hover > .text_mem > .open {
+    transform: rotate(45deg);
+}
+
+.input_mem:checked + .text_mem > .open {
+    transform: rotate(45deg);
+}
+
+/* .input_mem:checked + .text_mem > .open {
+    transform: rotate(45deg);
+}
+
+/* .mems1-5:hover > .text_mem > .img_mem, 
+.input_mem:checked + .text_mem > .img_mem {
+    height: 25em;
+    display: block;
+}
+
+/* .cssBayan_task:hover > .text_mem h2, 
 .input_mem:checked + .text_mem > .text_mem h2 {
     color: brown;
 }
 
+/*
 
 .text_mem1:hover {
     background-color: blueviolet;
@@ -110,9 +127,9 @@ body {
     display: flex;
     width: 400px;
     height: 200px;
-}
+} *
 
-/* 2 mem */
+/* 2 mem *
 .mems2 {
     display: block;
     border: 5px solid #1eae42;
@@ -156,7 +173,7 @@ body {
 /* 2 mem end */
 
 
-/* 3 mem */
+/* 3 mem *
 .mems3 {
     display: block;
     border: 5px solid #1eae42;
@@ -199,7 +216,7 @@ body {
 
 /* 3 mem end */
 
-/* 4 mem */
+/* 4 mem *
 .mems4 {
     display: block;
     border: 5px solid #1eae42;
@@ -242,7 +259,7 @@ body {
 
 /* 4 mem end */
 
-/* 5 mem */
+/* 5 mem *
 .mems5 {
     display: block;
     border: 5px solid #1eae42;
