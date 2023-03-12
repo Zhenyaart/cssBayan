@@ -4,8 +4,9 @@ body {
     position: relative;
     width:100vw;
     margin: 0 auto;
-    background-color: rgb(202, 203, 204);
-
+    font-style: normal;
+    font-weight: 700;
+    overflow-x: hidden;
  }
 
  html {
@@ -18,44 +19,43 @@ body {
 
 .cssBayan_task {
     max-width: 70rem;
-    background-color: rgb(232, 28, 161);
     margin: 0 auto;
 
 }
 .name_task {
-    margin: 4em 0em 0em 0em;
+    margin: 5em 0em 0em 0em;
 }
 .name_task h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     margin: 0;
 }
 .mems1-5 {
     display: block;
-    border: 0.3em solid #1eae42;
+    border: 0.2em solid #1eae42;
 }
 
 .input_mem {
     appearance: none;
     height: 0em;
     width: 0em;
+    transition-duration: 0.5s;
 }
 
 .text_mem {
     display: grid;
     grid-template-columns: 1fr 3em;
+    transition-duration: 0.5s;
 
 }
 
 .text_mem h2{
     display: block;
-    font-style: normal;
     cursor: pointer;
     position: relative;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2em;
     margin: 0em 0em 0em 0em;
+    color: blue;
+    transition-duration: 0.5s;
 }
 
 .open {
@@ -63,7 +63,8 @@ body {
     width: 1.5em;
     height: 1.5em;
     margin: 0em 0em 0em;
-    opacity: 0.5;
+    opacity: 0;
+    transition-duration: 0.5s;
 }
 .img_mem {
     display: none;
@@ -76,228 +77,47 @@ body {
     opacity: 1;
 }
 .mems1-5:hover > .text_mem > .img_mem {
-    height: 25em;
+    height: 30em;
     display: block;
+    transition-duration: 2.5s;
 }
 
 .input_mem:checked + .text_mem > .img_mem {
-    height: 25em;
+    height: 30em;
     display: block;
+    transition-duration: 0.5s;
 }
 
 .mems1-5:hover > .text_mem > .open {
     transform: rotate(45deg);
+    transition-duration: 0.5s;
 }
 
 .input_mem:checked + .text_mem > .open {
     transform: rotate(45deg);
 }
-
-/* .input_mem:checked + .text_mem > .open {
-    transform: rotate(45deg);
+.mems1-5:hover > .text_mem h2 {
+    color: rgb(66, 216, 99);
+}
+.mems1-5:active > .text_mem > .text_mem h2 {
+    color: blue;
 }
 
-/* .mems1-5:hover > .text_mem > .img_mem, 
-.input_mem:checked + .text_mem > .img_mem {
-    height: 25em;
-    display: block;
+@media (max-width: 820px) {
+    .name_task h1 {
+        font-size: 2em;
+    }
+    .text_mem h2{
+        font-size: 1.5em;
+    }
 }
 
-/* .cssBayan_task:hover > .text_mem h2, 
-.input_mem:checked + .text_mem > .text_mem h2 {
-    color: brown;
+@media (max-width: 320px) {
+    .name_task h1 {
+        font-size: 1.5em;
+    }
+    .text_mem h2{
+        font-size: 1.0em;
+    }
 }
 
-/*
-
-.text_mem1:hover {
-    background-color: blueviolet;
-}
-
-.input_mem1:checked + .memasik1 {
-    display: block;
-}
-
-.memasik1 {
-    display: none;
-    width: 100%;
-    margin: auto;
-}
-.img_mem1 {
-    display: flex;
-    width: 400px;
-    height: 200px;
-} *
-
-/* 2 mem *
-.mems2 {
-    display: block;
-    border: 5px solid #1eae42;
-}
-
-.text_mem2 {
-    display: block;
-    font-style: normal;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin: 0em 0em 0em 0em;
-}
-
-.text_mem2:hover {
-    background-color: blueviolet;
-}
-
-.input_mem2 {
-    appearance: none;
-    height: 0%;
-    width: 0%;
-}
-
-.input_mem2:checked + .memasik2 {
-    display: block;
-}
-
-.memasik2 {
-    display: none;
-    width: 100%;
-    margin: auto;
-}
-.img_mem2 {
-    display: flex;
-    width: 400px;
-    height: 200px;
-}
-
-/* 2 mem end */
-
-
-/* 3 mem *
-.mems3 {
-    display: block;
-    border: 5px solid #1eae42;
-}
-
-.text_mem3 {
-    display: block;
-    font-style: normal;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin: 0em 0em 0em 0em;
-}
-
-.text_mem3:hover {
-    background-color: blueviolet;
-}
-
-.input_mem3 {
-    appearance: none;
-    height: 0%;
-    width: 0%;
-}
-
-.input_mem3:checked + .memasik3 {
-    display: block;
-}
-
-.memasik3 {
-    display: none;
-    width: 100%;
-    margin: auto;
-}
-.img_mem3 {
-    display: flex;
-    width: 400px;
-    height: 200px;
-}
-
-/* 3 mem end */
-
-/* 4 mem *
-.mems4 {
-    display: block;
-    border: 5px solid #1eae42;
-}
-
-.text_mem4 {
-    display: block;
-    font-style: normal;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin: 0em 0em 0em 0em;
-}
-
-.text_mem4:hover {
-    background-color: blueviolet;
-}
-
-.input_mem4 {
-    appearance: none;
-    height: 0%;
-    width: 0%;
-}
-
-.input_mem4:hover + .memasik4 {
-    display: block;
-}
-
-.memasik4 {
-    display: none;
-    width: 100%;
-    margin: auto;
-}
-.img_mem4 {
-    display: flex;
-    width: 400px;
-    height: 200px;
-}
-
-/* 4 mem end */
-
-/* 5 mem *
-.mems5 {
-    display: block;
-    border: 5px solid #1eae42;
-}
-
-.text_mem5 {
-    display: block;
-    font-style: normal;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin: 0em 0em 0em 0em;
-}
-
-.text_mem5:hover {
-    background-color: blueviolet;
-}
-
-.input_mem5 {
-    appearance: none;
-    height: 0%;
-    width: 0%;
-}
-
-.input_mem5:checked + .memasik5 {
-    display: block;
-}
-
-.memasik5 {
-    display: none;
-    width: 100%;
-    margin: auto;
-}
-.img_mem5 {
-    display: flex;
-    width: 400px;
-    height: 200px;
-}
-
-/* 5 mem end */
